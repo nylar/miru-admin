@@ -1,0 +1,18 @@
+<h2>
+  {{ title }}
+</h2>
+
+<form method="POST" novalidate name="form">
+  <div class="field">
+    <label for="id_url">URL</label>
+    <input id="id_url" type="url" ng-model="url" name="url" placeholder="http://example.com" required />
+    <div ng-show="form.$submitted || form.url.$touched" class="errors">
+      <span ng-show="form.url.$error.required">Please enter a URL.</span>
+      <span ng-show="form.url.$error.url">This is not a valid URL.</span>
+    </div>
+  </div>
+  <div class="actions">
+    <button class="add-btn" ng-click="addSite()" ng-disabled="form.$invalid">Add Site</button>
+  </div>
+</form>
+

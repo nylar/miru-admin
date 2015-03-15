@@ -1,0 +1,32 @@
+<h2>
+  {{ title }}
+  <a href="#!/site/add" class="btn">Add Site</a>
+</h2>
+
+<div class="site-list">
+    <div class="filters">
+        <p>
+            Filters
+        </p>
+        <input type="search" ng-model="q" placeholder="Filter sites&#8230;" />
+    </div>
+    <table>
+        <thead>
+            <tr>
+                <th>Site</th>
+                <th>Last Crawled</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="site in sites | filter:q as results">
+                <td>{{ site.site }}</td>
+                <td>{{ site.lastCrawled }}</td>
+                <td class="action"><a class="btn" href="#">Re-crawl</a></td>
+            </tr>
+            <tr ng-if="results.length == 0" class="no-results">
+                <td colspan="3">No sites found</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

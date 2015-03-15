@@ -1,0 +1,6 @@
+<h2>
+  {{ title }}
+  <span class="queue-status {{ queue.status }}">{{ queue.status }}</span>
+</h2>
+
+<progress-bar progress="progress" items="itemCount" done="doneCount" status="queue.status"></progress-bar>

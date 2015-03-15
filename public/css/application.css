@@ -1,0 +1,286 @@
+.cf:before,
+.cf:after {
+    content: " ";
+    display: table;
+}
+
+.cf:after {
+    clear: both;
+}
+
+.cf {
+    *zoom: 1;
+}
+
+body {
+    font-family: 'Avenir Next';
+    line-height: 18px;
+    font-size: 13px;
+    color: #363E45;
+}
+
+.wrap {
+    margin: 0 auto;
+    width: 960px;
+}
+
+.top-bar {
+    height: 5px;
+    background-image: linear-gradient(90deg, #57BDC4 0%, #9FD468 100%);
+}
+
+header {
+    border-bottom: 1px solid #E5E8EA;
+}
+
+.logo {
+    height: 42px;
+    margin: 19px 41px 19px 0;
+    padding-right: 41px;
+    border-right: 1px solid #E4E8EB;
+    float: left;
+}
+
+.logo a {
+    color: #81919F;
+    font-size: 36px;
+    line-height: 42px;
+    font-family: 'Nuku Nuku';
+    transition: 0.4s color;
+    text-decoration: none;
+}
+
+.logo a:hover {
+    color: #6A7B89;
+    transition: 0.4s color;
+}
+
+nav {
+    padding: 31px 0;
+    float: left;
+}
+
+nav li {
+    display: inline-block;
+    padding-right: 41px;
+}
+
+nav li a {
+    color: #83929E;
+    text-decoration: none;
+    transition: 0.4s color;
+}
+
+nav li a:hover {
+    color: #56626D;
+    transition: 0.4s color;
+}
+
+nav li a.active {
+    color: #57BDC4;
+}
+
+.content {
+    margin: 50px 0;
+}
+
+a.btn {
+    text-decoration: none;
+    border-radius: 30px;
+    line-height: 13px;
+    color: white;
+    transition: 0.4s background;
+    background: #57BDC4;
+}
+
+a.btn:hover {
+    background: #46ADB4;
+    transition: 0.4s background;
+}
+
+h2 {
+    font-size: 24px;
+    line-height: 44px;
+    border-bottom: 1px solid #EDF0F3;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+}
+
+h2 a.btn {
+    font-size: 13px;
+    float: right;
+    padding: 10px 25px;
+}
+
+input[type="search"],
+input[type="text"],
+input[type="password"],
+input[type="url"] {
+    border: 1px solid #BBC3C8;
+    border-radius: 3px;
+    outline: none;
+    font-size: 13px;
+    font-family: 'Avenir Next';
+}
+
+input[type="search"]:focus,
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="url"]:focus {
+    border: 1px solid #46ADB4;
+    box-shadow: 0 0 3px 0 #57BDC4;
+}
+
+.filters {
+    margin-bottom: 40px;
+    border-bottom: 1px solid #EDF0F3;
+    padding-bottom: 20px;
+}
+
+.filters p {
+    font-weight: 500;
+    text-transform: uppercase;
+    display: inline-block;
+}
+
+.filters input {
+    display: inline-block;
+    padding: 5px;
+    margin-left: 30px;
+}
+
+.filters select {
+    margin-left: 30px;
+}
+
+table {
+    width: 100%;
+}
+
+th {
+    text-align: left;
+    padding: 10px;
+    border: 1px solid #E5E8EA;
+    font-weight: 600;
+    background: #F3F4F5;
+}
+
+td {
+    padding: 10px;
+    border-left: 1px solid #F3F4F5;
+    border-right: 1px solid #F3F4F5;
+    border-bottom: 1px solid #F3F4F5;
+}
+
+td.action a {
+    float: right;
+    padding: 5px 15px;
+}
+
+tr.no-results {
+    text-align: center;
+    color: #83929E;
+}
+
+span.status {
+    height: 12px;
+    width: 12px;
+    border-radius: 50px;
+    display: block;
+    margin: 0 auto;
+    margin-top: 5px;
+}
+
+span.active {
+    background: #2CB171;
+}
+
+span.paused {
+    background: #EBBD19;
+}
+
+span.finished {
+    background: #AFB9C4;
+}
+
+span.queue-status {
+    color: white;
+    border-radius: 5px;
+    padding: 10px 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 13px;
+    float: right;
+    line-height: 13px;
+}
+
+.status {
+    text-align: center;
+    width: 80px;
+}
+
+form input {
+    padding: 8px 12px;
+    width: 100%;
+}
+
+form label {
+    display: inline-block;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+form .field {
+    margin-bottom: 30px;
+}
+
+form .actions {
+    border-top: 1px solid #EDF0F3;
+    padding-top: 30px;
+}
+
+form .actions button.add-btn {
+    background: #9FD468;
+    border-radius: 3px;
+    line-height: 13px;
+    color: white;
+    transition: 0.4s background;
+    border: none;
+    padding: 10px 25px;
+    outline: none;
+}
+
+form .actions button.add-btn:hover {
+    background: #87BD4F;
+    transition: 0.4s background;
+}
+
+form .actions button[disabled],
+form .actions button[disabled]:hover {
+    background: #AFB9C4;
+    cursor: not-allowed;
+}
+
+form .errors {
+    margin-top: 15px; 
+    color: #E23D44;
+}
+
+.progress-bar {
+    height: 36px;
+    width: 100%;
+    background: #E2E5E9;
+    position: relative;
+}
+
+.bar {
+    display: block;
+    height: 100%;
+}
+
+.progress {
+    position: absolute;
+    width: 100%;
+    top: 10px;
+    text-align: center;
+}
